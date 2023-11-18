@@ -7,8 +7,8 @@ services:
       dockerfile: Dockerfile_Web_App
     container_name: www
     ports:
-      - 3087:80
-      #- 444:443 # for future ssl traffic
+      - 89:80
+      - 444:443 # for future ssl traffic
   db:
     image: mysql:latest
     container_name: db
@@ -22,7 +22,7 @@ services:
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     ports:
-      #- 8091:80
+      - 8091:80
     environment:
       - PMA_HOST=db
       - PMA_PORT=3306
