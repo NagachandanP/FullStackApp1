@@ -5,7 +5,7 @@ services:
     volumes:
       - "./:/var/www/html" # sync the current dir on local machine to the dir of container
     ports:
-      - 80:80
+      - 86:80
       - 443:443 # for future ssl traffic
   db: 
     image: mysql:latest
